@@ -1,0 +1,93 @@
+{
+    "openapi": "3.0.0",
+    "servers": [
+        {
+            "url": "https://financialmodelingprep.com/api/v3",
+            "variables": {}
+        }
+    ],
+    "info": {
+        "description": "This is a sample API",
+        "version": "1.0.0",
+        "title": "Finance Api",
+        "termsOfService": "",
+        "contact": {
+            "email": "stocks@xlapi.app"
+        }
+    },
+    "tags": [
+        {
+            "name": "stocks",
+            "description": "Operations about stocks",
+            "externalDocs": {
+                "description": "Find out more about our api",
+                "url": "http://xlapi.app"
+            }
+        }
+    ],
+    "paths": {
+        "/stock/real-time-price/{ticker}": {
+            "get": {
+                "summary": "",
+                "description": "Get a real time price for the stock",
+                "parameters": [
+                    {
+                        "name": "ticker",
+                        "in": "path",
+                        "required": true,
+                        "description": "The stock ticker name",
+                        "schema": {
+                            "type": "string",
+                            "default": "AAPL"
+                        }
+                    }
+                ],
+                "operationId": "getRealTimePriceByTicker",
+                "responses": {
+                    "default": {
+                        "description": "Default response"
+                    }
+                },
+                "tags":
+                    ["stocks"]
+            },
+            "description": "Relates to ticker paths"
+        },
+        "/company/stock/list": {
+            "get": {
+                "summary": "",
+                "description": "Get a list of all stocks",
+                "operationId": "getTickers",
+                "responses": {
+                    "default": {
+                        "description": "Default response"
+                    }
+                },
+                "tags":
+                    ["stocks"]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ApiResponse": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "links": {},
+        "callbacks": {}
+    },
+    "security": []
+}
