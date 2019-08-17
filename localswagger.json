@@ -1,47 +1,43 @@
 {
-    "openapi": "3.0.0",
-    "servers": [
-        {
-            "url": "https://raw.githubusercontent.com/evolvedlight/xl-api-sample-apis/master/localapi",
-            "variables": {}
-        }
-    ],
-    "info": {
-        "description": "This is a sample API, which has a couple of simple GET endpoints",
-        "version": "1.0.0",
-        "title": "Local Api",
-        "termsOfService": "",
-        "contact": {
-            "email": "localapi@xlapi.app"
-        }
-    },
-    "tags": [
-        {
-            "name": "pets",
-            "description": "Lists of pets"
-        }
-    ],
-    "paths": {
-        "/all": {
-            "get": {
-                "summary": "",
-                "description": "Get all pets",
-                "operationId": "getAllPets",
-                "responses": {
-                    "default": {
-                        "description": "Default response"
-                    }
-                },
-                "tags":
-                    ["pets"]
+  "paths": {
+    "/all": {
+      "get": {
+        "operationId": "getAllPets",
+        "summary": "This gets all pets as a list",
+        "responses": {
+          "200": {
+            "description": "This is a list of pets as a list",
+            "schema": {
+              "x-oad-type": "array",
+              "type": "array",
+              "title": "List of pets",
+              "items": {
+                "x-oad-type": "string",
+                "type": "string"
+              }
             },
-            "description": "Relates to ticker paths"
+            "x-oad-type": "response"
+          }
         }
-    },
-    "components": {
-        "schemas": {},
-        "links": {},
-        "callbacks": {}
-    },
-    "security": []
+      },
+      "x-oad-type": "operation"
+    }
+  },
+  "info": {
+    "title": "Local API example",
+    "version": "1.0.0",
+    "description": "This Api shows how static resources can be accessed for demo purposes",
+    "contact": {
+      "name": "Stephen Brown",
+      "email": "demos@xlapi.app",
+      "url": "https://xlapi.app"
+    }
+  },
+  "host": "raw.githubusercontent.com",
+  "basePath": "/https://raw.githubusercontent.com/evolvedlight/xl-api-sample-apis/master/localapi/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "swagger": "2.0"
 }
