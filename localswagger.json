@@ -21,6 +21,54 @@
         }
       },
       "x-oad-type": "operation"
+    },
+    "/all-object": {
+      "get": {
+        "operationId": "getAllPetObjects",
+        "summary": "Get all pet objects",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "x-oad-type": "array",
+              "type": "array",
+              "title": "List of pet objects",
+              "description": "List of Pets",
+              "items": {
+                "x-oad-type": "object",
+                "type": "object",
+                "title": "Pet",
+                "description": "Pet object",
+                "properties": {
+                  "name": {
+                    "x-oad-type": "string",
+                    "type": "string",
+                    "title": "Name of pet"
+                  },
+                  "age": {
+                    "x-oad-type": "integer",
+                    "type": "integer",
+                    "title": "Age of the pet",
+                    "format": "int32"
+                  },
+                  "color": {
+                    "x-oad-type": "string",
+                    "type": "string",
+                    "title": "Color of pet",
+                    "description": "This is the color of the pet",
+                    "enum": [
+                      "blue",
+                      "yellow"
+                    ]
+                  }
+                }
+              }
+            },
+            "x-oad-type": "response"
+          }
+        }
+      },
+      "x-oad-type": "operation"
     }
   },
   "info": {
