@@ -2,7 +2,7 @@
     "openapi": "3.0.0",
     "servers": [
         {
-            "url": "https://raw.githubusercontent.com/evolvedlight/xl-api-sample-apis/master/localapi/",
+            "url": "https://raw.githubusercontent.com/evolvedlight/xl-api-sample-apis/master/localapi",
             "variables": {}
         }
     ],
@@ -22,7 +22,7 @@
         }
     ],
     "paths": {
-        "all": {
+        "/all": {
             "get": {
                 "summary": "",
                 "description": "Get all pets",
