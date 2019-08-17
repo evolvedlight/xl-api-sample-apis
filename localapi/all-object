@@ -2,21 +2,25 @@
     {
         "name": "One",
         "age": 1,
-        "color": "blue"
+        "color": "blue",
+        "newfield": 7
     },
     {
         "name": "Two",
         "age": 2,
-        "color": "blue"
+        "color": "blue",
+        "newfield": 8
     },
     {
         "name": "Three",
         "age": 12,
-        "color": "yellow"
+        "color": "yellow",
+        "newfield": 8
     },
     {
         "name": "Four",
         "age": 7,
-        "color": "yellow"
+        "color": "yellow",
+        "newfield": 8
     }
 ]
