@@ -1,22 +1,22 @@
 [
     {
         "name": "One",
-        "age": 1
-        "color: "blue"
+        "age": 1,
+        "color": "blue"
     },
     {
         "name": "Two",
-        "age": 2
-        "color: "blue"
+        "age": 2,
+        "color": "blue"
     },
     {
         "name": "Three",
-        "age": 12
-        "color: "yellow"
+        "age": 12,
+        "color": "yellow"
     },
     {
         "name": "Four",
-        "age": 7
-        "color: "yellow"
+        "age": 7,
+        "color": "yellow"
     }
 ]
