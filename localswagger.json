@@ -1,0 +1,47 @@
+{
+    "openapi": "3.0.0",
+    "servers": [
+        {
+            "url": "https://raw.githubusercontent.com/evolvedlight/xl-api-sample-apis/master/localapi/",
+            "variables": {}
+        }
+    ],
+    "info": {
+        "description": "This is a sample API, which has a couple of simple GET endpoints",
+        "version": "1.0.0",
+        "title": "Local Api",
+        "termsOfService": "",
+        "contact": {
+            "email": "localapi@xlapi.app"
+        }
+    },
+    "tags": [
+        {
+            "name": "pets",
+            "description": "Lists of pets"
+        }
+    ],
+    "paths": {
+        "/all": {
+            "get": {
+                "summary": "",
+                "description": "Get all pets",
+                "operationId": "getAllPets",
+                "responses": {
+                    "default": {
+                        "description": "Default response"
+                    }
+                },
+                "tags":
+                    ["pets"]
+            },
+            "description": "Relates to ticker paths"
+        }
+    },
+    "components": {
+        "schemas": {},
+        "links": {},
+        "callbacks": {}
+    },
+    "security": []
+}
