@@ -1,9 +1,6 @@
 name: Docker Image CI
 
 on: [push]
-push:
-  paths:       # Push events containing matching files
-    - 'basic_auth/*'
 
 jobs:
 
