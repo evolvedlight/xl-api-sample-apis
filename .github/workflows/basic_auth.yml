@@ -1,6 +1,9 @@
 name: Docker Image CI
 
 on: [push]
+push:
+  paths:       # Push events containing matching files
+    - 'basic_auth/*'
 
 jobs:
 
@@ -12,3 +15,4 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag basic-auth-sample-app:$(date +%s)
+    - working-directory: basic_auth
