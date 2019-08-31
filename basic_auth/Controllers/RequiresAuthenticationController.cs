@@ -6,6 +6,7 @@ using basic_auth.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using NSwag.Annotations;
 
 namespace basic_auth.Controllers
 {
@@ -21,6 +22,7 @@ namespace basic_auth.Controllers
             _logger = logger;
         }
 
+        [OpenApiOperation("GetSalesFigures")]
         [HttpGet]
         public IEnumerable<SalesFigures> Get()
         {
