@@ -27,14 +27,13 @@ namespace basic_auth.Services
         public async Task<User> Authenticate(string username, string password)
         {
             _logger.LogInformation($"Username: {username}. Password: {password}");
-            var user = await Task.Run(() => TEST_USERS.SingleOrDefault(x => x.Username == username && x.Password == password));
+            var user = TEST_USERS.SingleOrDefault(x => x.Username == username && x.Password == password);
 
             if (user == null) 
             {
                 return null;
             }
             
-            user.Password = null;
             return user;
         }
     }
