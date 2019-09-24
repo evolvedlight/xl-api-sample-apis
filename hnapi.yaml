@@ -25,24 +25,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Items"
-              examples: 
-                sampleresponse:
-                  value: {
-                    [
-                      {
-                        "id": 1234,
-                        "title": "XlAPi makes Apis",
-                        "points": 1000,
-                        "user": "xlapi",
-                        "time": 1569344573,
-                        "time_ago": "5 minutes ago",
-                        "comments_count": 55,
-                        "type": "link",
-                        "url": "https://xlapi.app",
-                        "domain": "xlapi.app"
-                      }
-                    ]
-                 }
 components:
   schemas:
     Item:
